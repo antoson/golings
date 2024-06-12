@@ -1,14 +1,20 @@
 // structs3
 // Make me compile!
 //
-// I AM NOT DONE
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"strings"
+)
 
 type Person struct {
 	firstName string
 	lastName  string
+}
+
+func (p *Person) FullName() string {
+	return strings.Join([]string{p.firstName, p.lastName}, " ")
 }
 
 func main() {
